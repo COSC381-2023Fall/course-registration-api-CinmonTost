@@ -14,13 +14,12 @@ class Course:
         return self._prefix == prefix
 
     def request_for_changing_room(self, new_place):
-        # TODO: unfinished
-        self.confirmation()
-        self._place = new_place
-    
-    def confirmation(self):
-        # Mock this method in testing
-        # ask for confirmation from admin
-        time.sleep(10) # to be finished
+        if self.confirmation():
+            self._place = new_place
+        
+    def confirmation(self):    
+        time.sleep(10)
+        return True
 
+# List of courses
 courses = []
